@@ -22,11 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
     logo: {
       maxWidth: 40,
       marginRight: '10px'
-    },
-    black: {
-        main: '#000000',
-        contrastText: '#fff',
-      },
+    }
   })
 );
 
@@ -35,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar style={{ background: 'black'}} position="fixed">
         <Toolbar>
           <IconButton
             edge="start"

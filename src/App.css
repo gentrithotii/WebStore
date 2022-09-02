@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+.test {
+  height: 300px;
+  background: blue;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

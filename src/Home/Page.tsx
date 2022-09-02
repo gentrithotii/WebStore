@@ -1,16 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import React from "react";
+import Paper from "@material-ui/core/Paper";
+import Image from "/images/fruits-mix-background-homepage.jpeg";
 
 
+const styles = {
+    paperContainer: {
+        backgroundImage: `url(${Image})`,
+        height: '31.25rem',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        width: '100%'
+    }
+};
 
-function Page() {
-    const [count, setCount] = useState(0)
-  
-    return (
-    <>
-        <div><p>Page</p></div>
-    </>
-    )
-  }
-
-  export default Page
+export default class Page extends React.Component{
+    render(){
+        return(
+            <Paper style={styles.paperContainer}>
+            
+            </Paper>
+        )
+    }
+}
