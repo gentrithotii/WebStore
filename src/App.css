@@ -3,9 +3,43 @@
   text-align: center;
 }
 
-.test {
-  height: 300px;
-  background: blue;
+.about-us {
+  height: auto;
+  background: black;
+  display: flex;
+  width: 80%;
+  opacity: 0.8;
+}
+.content {
+  background: black;
+  opacity: .7;
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  opacity: none;
+  color:white;
+}
+ 
+h5 {
+  color: white;
+  padding: 0.5rem;
+}
+
+.h5-opacity{
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.rounded-border{
+  border: 2px solid black;
+  border-radius: 12px;
 }
 
 .logo {
