@@ -6,7 +6,7 @@ function Header() {
   
     return (
     <>
-        <div><p>Footer</p></div>
+        <div><p>Header</p></div>
     </>
     )
   }

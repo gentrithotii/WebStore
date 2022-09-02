@@ -6,7 +6,7 @@ function Main() {
   
     return (
     <>
-        <div><p>Footer</p></div>
+        <div><p>Main body</p></div>
     </>
     );
   };
