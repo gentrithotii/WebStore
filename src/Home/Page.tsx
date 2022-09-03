@@ -1,8 +1,6 @@
 import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Image from "/images/fruits-mix-background-homepage.jpeg";
-import { Box } from "@material-ui/core";
-
 
 
 const styles = {

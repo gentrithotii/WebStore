@@ -22,6 +22,11 @@
   text-align: center;
 }
 
+.footer{
+  width: 90%;
+  height: auto;
+}
+
 h2 {
   opacity: none;
   color:white;

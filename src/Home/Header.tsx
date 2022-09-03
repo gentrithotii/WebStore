@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import logo from "/images/logo.png";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -43,10 +44,15 @@ const useStyles = makeStyles((theme: Theme) =>
           </IconButton>
           <img src={logo} alt=" Fresh Fruits!" className={classes.logo} />
           <Typography variant="h6" className={classes.title}>
-          <Button color="inherit">Products</Button>
+          <Link to="/products">
+            <Button color="inherit">Products</Button>
+          </Link>
           </Typography>
 
+          <Link to="/products">
           <Button color="inherit">Cart</Button>
+          </Link>
+          
         </Toolbar>
       </AppBar>
     </div>
