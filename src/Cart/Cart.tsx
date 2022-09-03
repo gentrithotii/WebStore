@@ -9,9 +9,7 @@ function Cart() {
   
     return (
     <>
-      <Header />
-      <Page />
-      <Footer />
+   <h1>hello world</h1>
     </>
     );
   };

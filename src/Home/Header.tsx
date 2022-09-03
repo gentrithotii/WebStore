@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
           </Link>
           </Typography>
 
-          <Link to="/products">
+          <Link to="/cart">
           <Button color="inherit">Cart</Button>
           </Link>
           

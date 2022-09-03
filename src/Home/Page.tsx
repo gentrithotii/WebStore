@@ -2,7 +2,6 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 import Image from "/images/fruits-mix-background-homepage.jpeg";
 
-
 const styles = {
     paperContainer: {
         backgroundImage: `url(${Image})`,

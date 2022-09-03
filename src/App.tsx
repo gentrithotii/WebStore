@@ -1,7 +1,7 @@
-import * as React from 'react';
 import './App.css';
 import Home from './Home/Home';
 import Products from './Products/Products';
+import Cart from './Cart/Cart';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/products" element={<Products/>}/>
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
     </Router>
   );
