@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import Header from './Header'
 import Page from './Main'
 import Footer from './Footer'
@@ -9,9 +8,7 @@ function Cart() {
   
     return (
     <>
-      <Header />
-      <Page />
-      <Footer />
+   <h1>hello world</h1>
     </>
     );
   };

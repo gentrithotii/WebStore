@@ -1,13 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import Home from './Home/Home'
+import './App.css';
+import Home from './Home/Home';
+import Products from './Products/Products';
+import Cart from './Cart/Cart';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 
-function App() {
-
+export default function App() {
   return (
-    <Home />
-  )
+    <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/products" element={<Products/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+        </Routes>
+    </Router>
+  );
 }
 
-export default App
