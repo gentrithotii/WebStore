@@ -2,11 +2,11 @@ import './App.css';
 import Home from './Home/Home';
 import Products from './Products/Products';
 import Cart from './Cart/Cart';
-import {
-  BrowserRouter as Router,
+import { BrowserRouter as Router,
   Route,
   Routes
-} from "react-router-dom";
+} from 'react-router-dom';
+import Checkout from './Checkout/Checkout';
 
 export default function App() {
   return (
@@ -15,6 +15,7 @@ export default function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/products" element={<Products/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
     </Router>
   );
