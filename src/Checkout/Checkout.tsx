@@ -5,7 +5,7 @@ function Checkout() {
     <div > 
       <div className="checkout">
         <div className="container">
-          <h6>Home / Checkout</h6>
+          <h6>Cart / Checkout </h6>
           </div>
           <div className="container">
             <div className="row">
