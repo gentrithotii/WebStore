@@ -52,7 +52,9 @@ const useStyles = makeStyles((theme: Theme) =>
           <Link to="/cart">
             <Button color="inherit">Cart</Button>
           </Link>
-          
+          <Link to="/checkout">
+            <Button color="inherit">Checkout</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
