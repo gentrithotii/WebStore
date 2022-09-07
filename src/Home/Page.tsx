@@ -5,7 +5,7 @@ import Image from "/images/fruits-mix-background-homepage.jpeg";
 const styles = {
     paperContainer: {
         backgroundImage: `url(${Image})`,
-        height: '31.25rem',
+        height: '34.25rem',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
@@ -16,13 +16,12 @@ const styles = {
     },
     aboutUsContainer: {
         background: "#F1F1F1",
-        height: "31.25rem",
+        height: "36rem",
         width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
     }
-
 };
 
 export default class Page extends React.Component{
