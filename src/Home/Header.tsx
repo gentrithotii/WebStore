@@ -1,62 +1,90 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
+import React, { FC, ReactElement } from "react";
+import {
+  Box,
+  Container,
+  IconButton,
+  Menu,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import MenuIcon from "@material-ui/icons/Menu";
-import logo from "/images/logo.png";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1
-    },
-    menuButton: {
-      marginRight: theme.spacing(2)
-    },
-    title: {
-      flexGrow: 1,
-      textAlign: "center"
-    },
-    logo: {
-      maxWidth: 40,
-      marginRight: '10px'
-    }
-  })
-);
 
- function Header() {
-  const classes = useStyles();
+const Header: FC = (): ReactElement => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event: any) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
   return (
-    <div className={classes.root}>
-      <AppBar style={{ background: 'black'}} position="fixed">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
+    <Box
+      sx={{
+        width: "100%",
+        height: "auto",
+        backgroundColor: "black",
+        position: "fixed", 
+        color: "white"
+      }}
+    >
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <img src={logo} alt=" Fresh Fruits!" className={classes.logo} />
-          <Typography variant="h6" className={classes.title}>
-          <Link to="/products">
+            Online Fresh Fruits
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+            <Link className="link1"  to="/products">
             <Button color="inherit">Products</Button>
           </Link>
-          </Typography>
 
-          <Link to="/cart">
+          <Link className="link1" to="/cart">
             <Button color="inherit">Cart</Button>
           </Link>
-          
         </Toolbar>
-      </AppBar>
-    </div>
+      </Container>
+    </Box>
   );
-}
+};
 
 export default Header;
