@@ -1,65 +1,77 @@
-import { useState } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import data from "../json/products.json";
+import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
 export type Product = {
   id: number;
   name: string;
   price: number;
-  description: string;
   image: string;
 };
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      padding: "1rem",
-      height: "100%",
-    },
+const styles = {
+  
+    paperContainer: {
+      height: '100%',
+      width: '100%',
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+  },
     img: {
-      maxHeight: 250,
+      backgroundSize: "cover",
+      width: "90%",
+      heigh: "100%",
       borderRadius: "0 0 20px 20px",
-      objectFit: "cover",
     },
     button: {
       borderRadius: "0 0 20px 20px",
     },
     product: {
+      height: "auto",
+      alignItems: "center",
+      justtifyContent: "center",
+      maxwidth: "100%",
       border: "1px solid #ccc",
       borderRadius: "0 0 20px 20px",
     },
-  })
-);
-function Main() {
-  const [count, setCount] = useState(0);
+    imageContainer: {
+      height: "auto",
+    }
+
+  };
+
+export default class Main extends React.Component{
+  render(){
   const handleAddToCart = (clickedItem: Product) => null;
-  const classes = useStyles();
+
   return (
     <>
-      <div className={classes.root}>
-        <Grid container spacing={0}>
+    <Paper style={styles.paperContainer}>
+      <Grid container spacing={0}>
           {data.map((item) => (
-            <Grid item key={item.id} xs={12} sm={3} className={classes.product}>
-              <img src={item.image} className={classes.img} />
+            <Grid item key={item.id} xs={12} sm={4} md={3} style={styles.product}>
+              <div style={styles.imageContainer}>
+              <img src={item.image} style={styles.img}/>
+              </div>
+               
               <div>
                 <h3>{item.name}</h3>
-                <p>{item.description}</p>
                 <h3>${item.price}</h3>
               </div>
               <Button
                 onClick={() => handleAddToCart(item)}
-                className={classes.button}
+                style={styles.button}
               >
                 Add to Cart{" "}
               </Button>
             </Grid>
           ))}
         </Grid>
-      </div>
+    </Paper>  
     </>
   );
 }
-
-export default Main;
+}
