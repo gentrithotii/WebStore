@@ -81,7 +81,35 @@ const Header: FC = (): ReactElement => {
           <Link className="link1" to="/cart">
             <Button color="inherit">Cart</Button>
           </Link>
-         
+     
+            </Menu>
+          </Box>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+          >
+             Online Fresh Fruits
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                marginLeft: "1rem",
+              }}
+            >
+              <Link className="link" to="/products">
+            <Button color="inherit">Products</Button>
+          </Link>
+          <Link className="link" to="/cart">
+            <Button color="inherit">Cart</Button>
+          </Link>
+            </Box>
+          </Box>
         </Toolbar>
       </Container>
     </Box>
