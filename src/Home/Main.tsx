@@ -24,7 +24,7 @@ const styles = {
     }
 };
 
-export default class Page extends React.Component{
+export default class Main extends React.Component{
     render(){
         return(
             <>
