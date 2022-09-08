@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import Header from './Header'
-import Page from './Main'
-import Footer from './Footer'
+import Checkout from '../Checkout/Checkout';
 
 function Cart() {
     const [count, setCount] = useState(0)
@@ -10,9 +8,12 @@ function Cart() {
     <>
    <h1>hello world</h1>
    
+   <h6>checkout</h6>
+  
+   
 
     </>
     );
   };
 
-  export default Cart;
+  export default Cart;Checkout;
