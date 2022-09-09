@@ -43,7 +43,6 @@ const Header: FC = (): ReactElement => {
               display: { xs: "none", md: "flex" },
             }}
           >
-            Online Fresh Fruits
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -90,7 +89,9 @@ const Header: FC = (): ReactElement => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-             Online Fresh Fruits
+          <Link className="link" to="/">
+          <Button color="inherit">Fresh Fruits</Button>
+          </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Box
@@ -102,7 +103,10 @@ const Header: FC = (): ReactElement => {
                 marginLeft: "1rem",
               }}
             >
-              <Link className="link" to="/products">
+          <Link className="link" to="/">
+            <Button color="inherit">Fresh Fruits</Button>
+          </Link>
+            <Link className="link" to="/products">
             <Button color="inherit">Products</Button>
           </Link>
           <Link className="link" to="/cart">

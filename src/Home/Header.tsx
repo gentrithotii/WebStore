@@ -39,11 +39,12 @@ const Header: FC = (): ReactElement => {
             variant="h6"
             noWrap
             sx={{
-              mr: 2,
               display: { xs: "none", md: "flex" },
             }}
           >
-            Online Fresh Fruits
+            <Link className="link" to="/">
+              <Button color="inherit">Fresh Fruits</Button>
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -75,13 +76,11 @@ const Header: FC = (): ReactElement => {
               }}
             >
             <Link className="link1"  to="/products">
-            <Button color="inherit">Products</Button>
-          </Link>
-
-          <Link className="link1" to="/cart">
-            <Button color="inherit">Cart</Button>
-          </Link>
-     
+              <Button color="inherit">Products</Button>
+            </Link>
+            <Link className="link1" to="/cart">
+              <Button color="inherit">Cart</Button>
+            </Link>
             </Menu>
           </Box>
           <Typography
@@ -90,7 +89,9 @@ const Header: FC = (): ReactElement => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-             Online Fresh Fruits
+            <Link className="link" to="/">
+              <Button color="inherit">Fresh Fruits</Button>
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Box

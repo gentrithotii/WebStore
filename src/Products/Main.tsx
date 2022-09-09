@@ -18,7 +18,8 @@ const styles = {
       width: '100%',
       display: "flex",
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
+      backgroundColor: "white"
   },
     img: {
       backgroundSize: "cover",
@@ -39,6 +40,19 @@ const styles = {
     },
     imageContainer: {
       height: "auto",
+    }, 
+    freshFruits: {
+        backgroundColor: "#F0EAEA",
+        height: "8rem",
+        width: "100%",
+        justifyContent: "center",
+        alignItems: "center"
+    }, 
+    headerContent: {
+      opacity: 0.5,
+      marginTop: "80px",
+      color: "black",
+      fontSize: "2rem",
     }
 
   };
@@ -51,12 +65,14 @@ export default class Main extends React.Component{
     <>
     <Paper style={styles.paperContainer}>
       <Grid container spacing={0}>
+      <div style={styles.freshFruits}>
+        <h2 style={styles.headerContent}>Fresh Fruits</h2>
+      </div>
           {data.map((item) => (
             <Grid item key={item.id} xs={12} sm={4} md={3} style={styles.product}>
               <div style={styles.imageContainer}>
               <img src={item.image} style={styles.img}/>
               </div>
-               
               <div>
                 <h3>{item.name}</h3>
                 <h3>${item.price}</h3>
