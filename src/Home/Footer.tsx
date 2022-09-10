@@ -1,5 +1,4 @@
-import Paper from "@material-ui/core/Paper";
-import React, { FC, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 
 export const Footer: FC = (): ReactElement => {
@@ -18,7 +17,7 @@ export const Footer: FC = (): ReactElement => {
         <Grid container direction="column" alignItems="center">
           <Grid item xs={12}>
             <Typography color="black" variant="h6">
-                Online Fruit & Veg © 2022 <br /> Powered by Shopify
+                Online Fruit & Veg © 2022 <br /> Powered by Group 5
                 </Typography>
           </Grid>
         </Grid>

@@ -26,6 +26,10 @@
   color: white;
 }
 
+.link:hover, .link1:hover {
+  color: #D8D1D1;
+}
+
 .link1 {
   color: black;
 }
@@ -77,5 +81,12 @@ h5 {
 
 .read-the-docs {
   color: #888;
+}
+
+.header-container {
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  display: grid!important;
 }
 
