@@ -3,13 +3,8 @@ import Grid from "@material-ui/core/Grid";
 import data from "../json/products.json";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
+import IProduct from "../interface/product";
 
-export type Product = {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-};
 
 const styles = {
   
@@ -45,7 +40,7 @@ const styles = {
 
 export default class Main extends React.Component{
   render(){
-  const handleAddToCart = (clickedItem: Product) => null;
+  const handleAddToCart = (clickedItem: IProduct) => null;
 
   return (
     <>
