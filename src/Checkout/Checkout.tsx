@@ -1,7 +1,4 @@
 
-import Main from "./Main"
-import Footer from '../component/Footer';
-import Header from '../component/Header';
 
 function Checkout() {
   return (

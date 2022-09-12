@@ -75,6 +75,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     })
   }
 
+  function addToCart(id: number) {
+    setCartItems(currItems => {
+      return currItems.filter(item => item.id !== id)
+    })
+  }
+
   return (
     <ShoppingCartContext.Provider
       value={{

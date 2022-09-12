@@ -1,7 +1,16 @@
 import Button from "@material-ui/core/Button";
+import { Paper } from "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { getData } from "../Products/Main";
-import { Stack } from "@mui/material";
+import { styles, cartContainer } from "../style/styles"
+import {
+  Box,
+  Container,
+  IconButton,
+  Menu,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 
 type CartItemProps = {
     id: number
@@ -11,37 +20,47 @@ type CartItemProps = {
 const data = getData();
 
 export function CartItem({id, quantity}: CartItemProps) {
-    const { removeFromCart } = useShoppingCart()
+    const { removeFromCart, getItemQuantity, increaseCartQuantity, decreaseCartQuantity} = useShoppingCart()
     const item = data.find(i => i.id === id)
     if (item == null) return null;
 
     return (
-        <Stack direction="column" gap={2} className="d-flex align-items-center">
-      <img
-        src={item.image}
-        style={{ width: "125px", height: "75px", objectFit: "cover" }}
-      />
-      <div className="me-auto">
-        <div>
-          {item.name}{" "}
-          {quantity > 1 && (
-            <span className="text-muted" style={{ fontSize: ".65rem" }}>
-              x{quantity}
-            </span>
-          )}
-        </div>
-        <div className="text-muted" style={{ fontSize: ".75rem" }}>
-          {item.price}
-        </div>
-      </div>
-      <div> {item.price * quantity}</div>
-      <Button
-        variant="outlined"
-        size="small"
-        onClick={() => removeFromCart(item.id)}
-      >
-        &times;
-      </Button>
-    </Stack>
+      <>
+         <Paper style={cartContainer.paperContainer}>
+        <div className="flex-container">
+          <div>
+              <img className="cart-img" src={item.image}/>
+          </div>
+            <div>
+              {item.name}{" "}
+            </div>
+            <div> ${item.price} </div>
+            <div className="buttons">
+              <Button
+                size="small"
+                disableElevation
+                variant="contained"
+                onClick={() => decreaseCartQuantity(item.id)}
+              >
+                -
+              </Button>
+            </div>
+            <div>
+              <p>{quantity}</p>
+            </div>
+            <div className="buttons">
+            <Button
+              size="small"
+              disableElevation
+              variant="contained"
+              onClick={() => increaseCartQuantity(item.id)}
+            >
+              +
+            </Button>
+            </div>
+            <div> ${item.price * quantity} </div>
+          </div>    
+      </Paper>
+      </>
     )
 }
