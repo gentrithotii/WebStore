@@ -1,12 +1,15 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import {CartItem} from "../component/CartItem";
 import { getData } from "../Products/Main";
+import { Link } from "react-router-dom";
 
 const data = getData();
 
 export function Main() {
     const { cartItems } = useShoppingCart()
+
+
     return (
       <>
           <h2>Your Cart</h2>
@@ -23,7 +26,14 @@ export function Main() {
                 }, 0)
               }
             </div>
+             <Link to="/Checkout">
+     <button type="button">
+          Checkout
+     </button>
+ </Link>
           </Stack>
+
+
       </>
     )
 }

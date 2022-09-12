@@ -1,15 +1,18 @@
-import { useState } from "react";
-import Header from "./Header";
-import Page from "./Main";
-import Footer from "./Footer";
+
+import Main from "./Main"
+import Footer from '../component/Footer';
+import Header from '../component/Header';
+
 function Checkout() {
   return (
     <>
-    <div><p>Footer</p></div>
+    <Header/>
+    <Main />
+    <Footer/>
 </>
   );
-  
+
 }
-    
+
 
   export default Checkout;
