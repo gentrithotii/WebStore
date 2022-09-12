@@ -1,5 +1,6 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import Button from "@material-ui/core/Button";
+import { Paper } from "@mui/material";
 
 const styles = {
   
@@ -66,19 +67,22 @@ export function Product({ id, name, price, origin, image, amount }: ProductProps
 
   return (
     <>
+    <Paper>
       <div style={styles.imageContainer}>
-        <img src={image} style={styles.img} />
-      </div>
-      <div>
-        <h3>{name}</h3>
-        <h3>${price}</h3>
-      </div>
-      <Button
-        onClick={() => increaseCartQuantity(id)}
-        style={styles.button}
-      >
-        Add to Cart{" "}
-      </Button>
+          <img src={image} style={styles.img} />
+        </div>
+        <div>
+          <h3>{name}</h3>
+          <h3>${price}</h3>
+        </div>
+        <Button
+          onClick={() => increaseCartQuantity(id)}
+          style={styles.button}
+        >
+          Add to Cart{" "}
+        </Button>
+    </Paper>
+      
     </>
   )
 }

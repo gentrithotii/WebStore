@@ -1,6 +1,6 @@
 import Button from "@material-ui/core/Button";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { getData } from "../Products/Products";
+import { getData } from "../Products/Main";
 import { Stack } from "@mui/material";
 
 type CartItemProps = {
