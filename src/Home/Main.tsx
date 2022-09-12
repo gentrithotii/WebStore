@@ -12,10 +12,11 @@ const styles = {
         width: '100%',
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+       
     },
     aboutUsContainer: {
-        background: "#F1F1F1",
+        backgroundColor: "#302F2D",
         height: "36rem",
         width: "100%",
         display: "flex",

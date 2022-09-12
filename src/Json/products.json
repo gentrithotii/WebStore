@@ -5,7 +5,7 @@
     "price": 36,
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Banana",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 180,
     "origin": "Guatemala",
     "image": "https://source.unsplash.com/random/640x360/?Blueberry",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 156,
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Egg Fruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 110,
     "origin": "Portugal",
     "image": "https://source.unsplash.com/random/640x360/?Breadfruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": 284,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Cashew",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "price": 155,
     "origin": "United States",
     "image": "https://source.unsplash.com/random/640x360/?Melon",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "price": 199,
     "origin": "Indonesia",
     "image": "https://source.unsplash.com/random/640x360/?Mango",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "price": 289,
     "origin": "Canada",
     "image": "https://source.unsplash.com/random/640x360/?Grapefruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "price": 42,
     "origin": "Yemen",
     "image": "https://source.unsplash.com/random/640x360/?Plum",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "price": 48,
     "origin": "Uruguay",
     "image": "https://source.unsplash.com/random/640x360/?Bar Mix",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "price": 147,
     "origin": "Philippines",
     "image": "https://source.unsplash.com/random/640x360/?Kiwifruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "price": 176,
     "origin": "Czech Republic",
     "image": "https://source.unsplash.com/random/640x360/?Nut",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "price": 91,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Pomegranate",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "price": 173,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Gooseberry",
-    "amount": 1
+    "amount": 100   
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "price": 223,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Blackcurrant",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "price": 244,
     "origin": "Portugal",
     "image": "https://source.unsplash.com/random/640x360/?Arrowroot",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "price": 168,
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Coconut",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "price": 62,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Cucumber",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "price": 146,
     "origin": "Philippines",
     "image": "https://source.unsplash.com/random/640x360/?Olive",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "price": 87,
     "origin": "Colombia",
     "image": "https://source.unsplash.com/random/640x360/?Pears",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "price": 260,
     "origin": "Colombia",
     "image": "https://source.unsplash.com/random/640x360/?Lamb",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "price": 70,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Goji",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "price": 82,
     "origin": "Indonesia",
     "image": "https://source.unsplash.com/random/640x360/?Jackfruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "price": 82,
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Feijoa",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "price": 288,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Limes",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "price": 137,
     "origin": "Panama",
     "image": "https://source.unsplash.com/random/640x360/?Chili pepper",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "price": 224,
     "origin": "France",
     "image": "https://source.unsplash.com/random/640x360/?Tomato",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@
     "price": 155,
     "origin": "Portugal",
     "image": "https://source.unsplash.com/random/640x360/?Zucchini",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 29,
@@ -229,7 +229,7 @@
     "price": 215,
     "origin": "Indonesia",
     "image": "https://source.unsplash.com/random/640x360/?Pumpkin",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 30,
@@ -237,7 +237,7 @@
     "price": 102,
     "origin": "Thailand",
     "image": "https://source.unsplash.com/random/640x360/?Pea",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 31,
@@ -245,7 +245,7 @@
     "price": 50,
     "origin": "Ukraine",
     "image": "https://source.unsplash.com/random/640x360/?Fennel",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 32,
@@ -253,7 +253,7 @@
     "price": 109,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Carrot",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 33,
@@ -261,7 +261,7 @@
     "price": 239,
     "origin": "Philippines",
     "image": "https://source.unsplash.com/random/640x360/?Aromat Spice / Seasoning",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 34,
@@ -269,7 +269,7 @@
     "price": 73,
     "origin": "Indonesia",
     "image": "https://source.unsplash.com/random/640x360/?Jalapeño",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 35,
@@ -277,7 +277,7 @@
     "price": 107,
     "origin": "Romania",
     "image": "https://source.unsplash.com/random/640x360/?Maize",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 36,
@@ -285,7 +285,7 @@
     "price": 158,
     "origin": "Japan",
     "image": "https://source.unsplash.com/random/640x360/?Capsicum",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 37,
@@ -293,7 +293,7 @@
     "price": 115,
     "origin": "Mexico",
     "image": "https://source.unsplash.com/random/640x360/?Cherry",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 38,
@@ -301,7 +301,7 @@
     "price": 252,
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Blueberry",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 39,
@@ -309,7 +309,7 @@
     "price": 125,
     "origin": "Honduras",
     "image": "https://source.unsplash.com/random/640x360/?Boysenberry",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 40,
@@ -317,7 +317,7 @@
     "price": 143,
     "origin": "Uzbekistan",
     "image": "https://source.unsplash.com/random/640x360/?Pineapple",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 41,
@@ -325,7 +325,7 @@
     "price": 263,
     "origin": "Brazil",
     "image": "https://source.unsplash.com/random/640x360/?Kiwi",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 42,
@@ -333,7 +333,7 @@
     "price": 146,
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Chico fruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 43,
@@ -341,7 +341,7 @@
     "price": 204,
     "origin": "Czech Republic",
     "image": "https://source.unsplash.com/random/640x360/?Scallops",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 44,
@@ -349,7 +349,7 @@
     "price": 183,
     "origin": "China",
     "image": "https://source.unsplash.com/random/640x360/?Pomelo",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 45,
@@ -357,7 +357,8 @@
     "price": 251,
     "origin": "Sweden",
     "image": "https://source.unsplash.com/random/640x360/?Carambola",
-    "amount": 1
+
+    "amount": 100
   },
   {
     "id": 46,
@@ -365,7 +366,7 @@
     "price": 152,
     "origin": "Yemen",
     "image": "https://source.unsplash.com/random/640x360/?Yuzu",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 47,
@@ -373,25 +374,25 @@
     "price": 265,
     "origin": "Oman",
     "image": "https://source.unsplash.com/random/640x360/?Miracle fruit",
-    "amount": 1
+    "amount": 100
   },
   {
     "id": 48,
     "name": "Squash (plant)",
     "price": 73,
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Squash (plant)",
-    "amount": 1
+    "amount": 100
+
   },
   {
     "id": 49,
     "name": "Loganberry",
     "price": 210,
-    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     "origin": "France",
     "image": "https://source.unsplash.com/random/640x360/?Loganberry",
-    "amount": 1
+    "amount": 100
+
   },
   {
     "id": 50,
@@ -399,7 +400,7 @@
     "price": 204,
     "origin": "Poland",
     "image": "https://source.unsplash.com/random/640x360/?Raisin",
-    "amount": 1
+    "amount": 100
   }
   
 ]

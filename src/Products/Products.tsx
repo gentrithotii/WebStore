@@ -1,18 +1,17 @@
-import { useState } from "react";
-import Header from "./Header";
-import Page from "./Main";
-import Footer from "./Footer";
+import { useState } from 'react';
+import Header from '../component/Header';
+import Main from './Main';
+import Footer from '../component/Footer';
 
 function Products() {
-  const [count, setCount] = useState(0);
-
-  return (
+  
+    return (
     <>
       <Header />
-      <Page />
+      <Main />
       <Footer />
     </>
-  );
-}
+    )
+  }
 
-export default Products;
+  export default Products;

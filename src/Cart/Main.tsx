@@ -1,13 +1,29 @@
-import { useState } from 'react'
+import { useShoppingCart } from "../context/ShoppingCartContext";
+import { Stack } from "@mui/material";
+import {CartItem} from "../component/CartItem";
+import { getData } from "../Products/Main";
 
-function Main() {
-    const [count, setCount] = useState(0)
-  
+const data = getData();
+
+export function Main() {
+    const { cartItems } = useShoppingCart()
     return (
-    <>
-        <div><p>Main body</p></div>
-    </>
-    );
-  };
-
-  export default Main;
+      <>
+          <h2>Your Cart</h2>
+          <Stack gap={3}>
+            {cartItems.map(item => (
+              <CartItem key={item.id} {...item} />
+            ))}
+            <div className="ms-auto fw-bold fs-5">
+              Total{" "}
+              {
+                cartItems.reduce((total, cartItem) => {
+                  const item = data.find(i => i.id === cartItem.id)
+                  return total + (item?.price || 0) * cartItem.quantity
+                }, 0)
+              }
+            </div>
+          </Stack>
+      </>
+    )
+}
