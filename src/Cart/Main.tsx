@@ -1,5 +1,5 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { Button, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import {CartItem} from "../component/CartItem";
 import { getData } from "../Products/Main";
 import { Link } from "react-router-dom";
