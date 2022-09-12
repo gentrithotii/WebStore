@@ -1,3 +1,5 @@
+import { grid } from "@mui/system";
+import Image from "/images/fruits-mix-background-homepage.jpeg";
 
 export const styles = {
   
@@ -7,7 +9,7 @@ export const styles = {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "white"
+      backgroundColor: "white",
   },
     img: {
       backgroundSize: "cover",
@@ -44,24 +46,36 @@ export const styles = {
     }
 }
 
-export const itemStyle = {
-    div: {
-  display: "flex",
-  justifyContent: "space-between",
-  flexDirection: "column",
-  width: "100%",
-  border: "1px solid lightblue",
-  borderRadius: "20px",
-  height: "100%"
-    },
-
-  button: {
-    borderRadius: "0 0 20px 20px"
-  },
-
-  img: {
-    maxHeight: "250px",
-    objectFit: "cover",
-    borderRadius: "20px 20px 0 0"
-  },
+export const cartContainer = {
+  paperContainer: {
+    height: 'auto',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    width: "80%"
+  }
 }
+
+
+export const homeContainer = {
+  paperContainer: {
+      backgroundImage: `url(${Image})`,
+      height: '34.25rem',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+      width: '100%',
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+     
+  },
+  aboutUsContainer: {
+      backgroundColor: "#302F2D",
+      height: "36rem",
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+  }
+};
