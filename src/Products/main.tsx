@@ -1,7 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import products from "../json/products.json";
 import IProduct from "../interface/product";
-import { styles } from "../style/styleForMain";
+import { styles } from "../style/styles";
 import { Product } from "../component/Product";
 
 const data = products as IProduct[];
