@@ -357,6 +357,7 @@
     "price": 251,
     "origin": "Sweden",
     "image": "https://source.unsplash.com/random/640x360/?Carambola",
+
     "amount": 100
   },
   {
@@ -382,6 +383,7 @@
     "origin": "Russia",
     "image": "https://source.unsplash.com/random/640x360/?Squash (plant)",
     "amount": 100
+
   },
   {
     "id": 49,
@@ -390,6 +392,7 @@
     "origin": "France",
     "image": "https://source.unsplash.com/random/640x360/?Loganberry",
     "amount": 100
+
   },
   {
     "id": 50,
