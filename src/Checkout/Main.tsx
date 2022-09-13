@@ -1,78 +1,158 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import validator from "validator";
 
 function Main() {
-  const [] = useState("");
-  const [message, setMessage] = useState("");
+  const [messageFName, setMessageFName] = useState("");
+  const [messageLName, setMessageLName] = useState("");
+  const [messageEmail, setMessageEmail] = useState("");
+  const [messageAddress, setMessageAddress] = useState("");
+  const [messagePhone, setMessagePhone] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
-  const validateEmail = (e:any) => {
+  const handleDisabled = () => {
+    if (
+      messageFName === "" &&
+      messageLName === "" &&
+      messageEmail === "" &&
+      messageAddress === "" &&
+      messagePhone === ""
+    ) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  };
+
+  const validateEmail = (e: any) => {
     var email = e.target.value;
-    
     if (validator.isEmail(email)) {
-      setMessage("");
+      setMessageEmail("");
     } else {
-      setMessage("Please, enter valid name!");
+      setMessageEmail("please enter a valid email");
     }
   };
 
-  const validateName = (e:any) => {
-      var name = e.target.value;
+  const validateFName = (e: any) => {
+    var name = e.target.value;
 
-      if (validator.isAlpha(name)) {
-        setMessage("");
-      } else {
-        setMessage("Please, enter valid name!");
-      }
+    if (validator.isAscii(name)) {
+      setMessageFName("");
+    } else {
+      setMessageFName("Please, enter valid name!");
+    }
+  };
+  const validateLName = (e: any) => {
+    var name = e.target.value;
+
+    if (validator.isAscii(name)) {
+      setMessageLName("");
+    } else {
+      setMessageLName("Please, enter valid name!");
+    }
   };
 
-  const validatePhone = (e:any) => {
+  const validatePhone = (e: any) => {
     var phone = e.target.value;
-
     if (validator.isMobilePhone(phone)) {
-      setMessage("");
+      setMessagePhone("");
     } else {
-      setMessage("Please, enter valid telephone number!");
+      setMessagePhone("Please, enter valid telephone number!");
     }
-};
+  };
 
-const validateAddress = (e:any) => {
-  var address = e.target.value;
+  const validateAddress = (e: any) => {
+    var address = e.target.value;
+    if (validator.isAscii(address)) {
+      setMessageAddress("");
+    } else {
+      setMessageAddress("Please, enter valid Adress!");
+    }
+  };
 
-  if (validator.isAlphanumeric(address)) {
-    setMessage("");
-  } else {
-    setMessage("Please, enter valid telephone number!");
-  }
-};
-
+  useEffect(() => {
+    handleDisabled();
+  });
 
   return (
     <>
       <div className="checkout-container">
         <div className="div-container">
-        <form className="form">
-        <label>First Name</label>
-          <input  onChange={(e) => validateName(e)} required name="FirstName" type="text" placeholder="First Name"/>
-          <span style={{ fontWeight: "bold", color: "red" }}> {message} </span>
-          <label >Last Name</label>
-          <input  onChange={(e) => validateName(e)} required name="LastName" type="text" placeholder="Last Name" />
-          <span style={{ fontWeight: "bold", color: "red" }}> {message} </span>
-          <label >Email</label>
-          <input onChange={(e) => validateEmail(e)} required name="Email" type="text" placeholder="Email" />
-          <span style={{ fontWeight: "bold", color: "red" }}> {message} </span>
-          <label >Address</label>
-          <input onChange={(e) => validateAddress(e)} required name="Address" type="text" placeholder="Address" />
-          <span style={{ fontWeight: "bold", color: "red" }}> {message} </span>
-          <label >Phone</label>
-          <input  onChange={(e) => validatePhone(e)} required name="Phone" type="text" placeholder="Phone" />
-          <span style={{ fontWeight: "bold", color: "red" }}> {message} </span>
+          <form className="form">
+            <label>First Name</label>
+            <input
+              onChange={(e) => validateFName(e)}
+              required
+              name="FirstName"
+              type="text"
+              placeholder="First Name"
+            />
+            <span style={{ fontWeight: "bold", color: "red" }}>
+              {" "}
+              {messageFName}{" "}
+            </span>
+            <label>Last Name</label>
+            <input
+              onChange={(e) => validateLName(e)}
+              required
+              name="LastName"
+              type="text"
+              placeholder="Last Name"
+            />
+            <span style={{ fontWeight: "bold", color: "red" }}>
+              {" "}
+              {messageLName}{" "}
+            </span>
+            <label>Email</label>
+            <input
+              onChange={(e) => validateEmail(e)}
+              required
+              name="Email"
+              type="text"
+              placeholder="Email"
+            />
+            <span style={{ fontWeight: "bold", color: "red" }}>
+              {" "}
+              {messageEmail}{" "}
+            </span>
+            <label>Address</label>
+            <input
+              onChange={(e) => validateAddress(e)}
+              required
+              name="Address"
+              type="text"
+              placeholder="Address"
+            />
+            <span style={{ fontWeight: "bold", color: "red" }}>
+              {" "}
+              {messageAddress}{" "}
+            </span>
+            <label>Phone</label>
+            <input
+              onChange={(e) => validatePhone(e)}
+              required
+              name="Phone"
+              type="text"
+              placeholder="Phone"
+            />
+            <span style={{ fontWeight: "bold", color: "red" }}>
+              {" "}
+              {messagePhone}{" "}
+            </span>
 
-          <br />
-          <Link to="/Confirmation"><button type="submit" value="Submit">Submit</button></Link>
-          <Link to="/Cart"><button type="button" value="Cancel">Cancel</button></Link>
-        </form>
+            <br />
+            <Link to="/Confirmation">
+              <button disabled={!disabled} value="Submit">
+                Submit
+              </button>
+            </Link>
+            <Link to="/Cart">
+              <button type="button" value="Cancel">
+                Cancel
+              </button>
+            </Link>
+          </form>
         </div>
       </div>
     </>
