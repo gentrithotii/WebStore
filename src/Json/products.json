@@ -4,352 +4,309 @@
     "name": "Banana",
     "price": 36,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Banana",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Banana"
   },
   {
     "id": 2,
     "name": "Blueberry",
     "price": 180,
     "origin": "Guatemala",
-    "image": "https://source.unsplash.com/random/640x360/?Blueberry",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Blueberry"
   },
   {
     "id": 3,
     "name": "Egg Fruit",
     "price": 156,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Egg Fruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Egg Fruit"
+    
   },
   {
     "id": 4,
     "name": "Breadfruit",
     "price": 110,
     "origin": "Portugal",
-    "image": "https://source.unsplash.com/random/640x360/?Breadfruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Breadfruit"
   },
   {
     "id": 5,
     "name": "Cashew",
     "price": 284,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Cashew",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Cashew"
   },
   {
     "id": 6,
     "name": "Melon",
     "price": 155,
     "origin": "United States",
-    "image": "https://source.unsplash.com/random/640x360/?Melon",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Melon"
   },
   {
     "id": 7,
     "name": "Mango",
     "price": 199,
     "origin": "Indonesia",
-    "image": "https://source.unsplash.com/random/640x360/?Mango",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Mango"
   },
   {
     "id": 8,
     "name": "Grapefruit",
     "price": 289,
     "origin": "Canada",
-    "image": "https://source.unsplash.com/random/640x360/?Grapefruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Grapefruit"
   },
   {
     "id": 9,
     "name": "Plum",
     "price": 42,
     "origin": "Yemen",
-    "image": "https://source.unsplash.com/random/640x360/?Plum",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Plum"
   },
   {
     "id": 10,
     "name": "Bar Mix - Lemon",
     "price": 48,
     "origin": "Uruguay",
-    "image": "https://source.unsplash.com/random/640x360/?Bar Mix",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Bar Mix"
   },
   {
     "id": 11,
     "name": "Kiwifruit",
     "price": 147,
     "origin": "Philippines",
-    "image": "https://source.unsplash.com/random/640x360/?Kiwifruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Kiwifruit"
   },
   {
     "id": 12,
     "name": "Nut - Chestnuts, Whole",
     "price": 176,
     "origin": "Czech Republic",
-    "image": "https://source.unsplash.com/random/640x360/?Nut",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Nut"
   },
   {
     "id": 13,
     "name": "Pomegranate",
     "price": 91,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Pomegranate",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Pomegranate"
   },
   {
     "id": 14,
     "name": "Gooseberry",
     "price": 173,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Gooseberry",
-    "amount": 100   
+    "image": "https://source.unsplash.com/random/640x360/?Gooseberry"   
   },
   {
     "id": 15,
     "name": "Blackcurrant",
     "price": 223,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Blackcurrant",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Blackcurrant"
   },
   {
     "id": 16,
     "name": "Arrowroot",
     "price": 244,
     "origin": "Portugal",
-    "image": "https://source.unsplash.com/random/640x360/?Arrowroot",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Arrowroot"
   },
   {
     "id": 17,
     "name": "Coconut",
     "price": 168,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Coconut",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Coconut"
   },
   {
     "id": 18,
     "name": "Cucumber",
     "price": 62,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Cucumber",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Cucumber"
   },
   {
     "id": 19,
     "name": "Olive",
     "price": 146,
     "origin": "Philippines",
-    "image": "https://source.unsplash.com/random/640x360/?Olive",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Olive"
   },
   {
     "id": 20,
     "name": "Pears - Anjou",
     "price": 87,
     "origin": "Colombia",
-    "image": "https://source.unsplash.com/random/640x360/?Pears",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Pears"
   },
   {
     "id": 21,
     "name": "Lamb - Leg, Bone In",
     "price": 260,
     "origin": "Colombia",
-    "image": "https://source.unsplash.com/random/640x360/?Lamb",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Lamb"
   },
   {
     "id": 22,
     "name": "Goji",
     "price": 70,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Goji",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Goji"
   },
   {
     "id": 23,
     "name": "Jackfruit",
     "price": 82,
     "origin": "Indonesia",
-    "image": "https://source.unsplash.com/random/640x360/?Jackfruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Jackfruit"
   },
   {
     "id": 24,
     "name": "Feijoa",
     "price": 82,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Feijoa",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Feijoa"
   },
   {
     "id": 25,
     "name": "Limes",
     "price": 288,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Limes",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Limes"
   },
   {
     "id": 26,
     "name": "Chili pepper",
     "price": 137,
     "origin": "Panama",
-    "image": "https://source.unsplash.com/random/640x360/?Chili pepper",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Chili pepper"
   },
   {
     "id": 27,
     "name": "Tomato",
     "price": 224,
     "origin": "France",
-    "image": "https://source.unsplash.com/random/640x360/?Tomato",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Tomato"
   },
   {
     "id": 28,
     "name": "Zucchini",
     "price": 155,
     "origin": "Portugal",
-    "image": "https://source.unsplash.com/random/640x360/?Zucchini",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Zucchini"
   },
   {
     "id": 29,
     "name": "Pumpkin",
     "price": 215,
     "origin": "Indonesia",
-    "image": "https://source.unsplash.com/random/640x360/?Pumpkin",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Pumpkin"
   },
   {
     "id": 30,
     "name": "Pea",
     "price": 102,
     "origin": "Thailand",
-    "image": "https://source.unsplash.com/random/640x360/?Pea",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Pea"
   },
   {
     "id": 31,
     "name": "Fennel - Seeds",
     "price": 50,
     "origin": "Ukraine",
-    "image": "https://source.unsplash.com/random/640x360/?Fennel",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Fennel"
   },
   {
     "id": 32,
     "name": "Carrots",
     "price": 109,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Carrot",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Carrot"
   },
   {
     "id": 33,
     "name": "Aromat Spice / Seasoning",
     "price": 239,
     "origin": "Philippines",
-    "image": "https://source.unsplash.com/random/640x360/?Aromat Spice / Seasoning",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Aromat Spice / Seasoning"
   },
   {
     "id": 34,
     "name": "Jalapeño",
     "price": 73,
     "origin": "Indonesia",
-    "image": "https://source.unsplash.com/random/640x360/?Jalapeño",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Jalapeño"
   },
   {
     "id": 35,
     "name": "Maize",
     "price": 107,
     "origin": "Romania",
-    "image": "https://source.unsplash.com/random/640x360/?Maize",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Maize"
   },
   {
     "id": 36,
     "name": "Capsicum",
     "price": 158,
     "origin": "Japan",
-    "image": "https://source.unsplash.com/random/640x360/?Capsicum",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Capsicum"
   },
   {
     "id": 37,
     "name": "Cherry",
     "price": 115,
     "origin": "Mexico",
-    "image": "https://source.unsplash.com/random/640x360/?Cherry",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Cherry"
   },
   {
     "id": 38,
     "name": "Blueberry",
     "price": 252,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Blueberry",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Blueberry"
   },
   {
     "id": 39,
     "name": "Boysenberry",
     "price": 125,
     "origin": "Honduras",
-    "image": "https://source.unsplash.com/random/640x360/?Boysenberry",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Boysenberry"
   },
   {
     "id": 40,
     "name": "Pineapple",
     "price": 143,
     "origin": "Uzbekistan",
-    "image": "https://source.unsplash.com/random/640x360/?Pineapple",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Pineapple"
   },
   {
     "id": 41,
     "name": "Kiwi",
     "price": 263,
     "origin": "Brazil",
-    "image": "https://source.unsplash.com/random/640x360/?Kiwi",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Kiwi"
   },
   {
     "id": 42,
     "name": "Chico fruit",
     "price": 146,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Chico fruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Chico fruit"
   },
   {
     "id": 43,
     "name": "Scallops - In Shell",
     "price": 204,
     "origin": "Czech Republic",
-    "image": "https://source.unsplash.com/random/640x360/?Scallops",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Scallops"
   },
   {
     "id": 44,
     "name": "Pomelo",
     "price": 183,
     "origin": "China",
-    "image": "https://source.unsplash.com/random/640x360/?Pomelo",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Pomelo"
   },
   {
     "id": 45,
@@ -365,24 +322,21 @@
     "name": "Yuzu",
     "price": 152,
     "origin": "Yemen",
-    "image": "https://source.unsplash.com/random/640x360/?Yuzu",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Yuzu"
   },
   {
     "id": 47,
     "name": "Miracle fruit",
     "price": 265,
     "origin": "Oman",
-    "image": "https://source.unsplash.com/random/640x360/?Miracle fruit",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Miracle fruit"
   },
   {
     "id": 48,
     "name": "Squash (plant)",
     "price": 73,
     "origin": "Russia",
-    "image": "https://source.unsplash.com/random/640x360/?Squash (plant)",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Squash (plant)"
 
   },
   {
@@ -390,8 +344,7 @@
     "name": "Loganberry",
     "price": 210,
     "origin": "France",
-    "image": "https://source.unsplash.com/random/640x360/?Loganberry",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Loganberry"
 
   },
   {
@@ -399,8 +352,7 @@
     "name": "Raisin",
     "price": 204,
     "origin": "Poland",
-    "image": "https://source.unsplash.com/random/640x360/?Raisin",
-    "amount": 100
+    "image": "https://source.unsplash.com/random/640x360/?Raisin"
   }
   
 ]
