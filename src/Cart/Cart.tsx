@@ -1,7 +1,7 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Stack } from "@mui/material";
 import { CartItem } from "../component/CartItem";
-import { getData } from "../Products/Main";
+import { getData } from "../Products/main";
 import { Link } from "react-router-dom";
 
 const data = getData();

@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import { Paper } from "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { getData } from "../Products/Main";
+import { getData } from "../Products/main";
 import { styles, cartContainer } from "../style/styles"
 import {
   Box,
