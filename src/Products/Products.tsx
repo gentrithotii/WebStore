@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Header from '../component/Header';
-import Main from './Main';
+import Main from './main';
 import Footer from '../component/Footer';
 
 function Products() {
