@@ -1,5 +1,5 @@
 import Grid from "@material-ui/core/Grid";
-import products from "../json/products.json";
+import products from "../Json/products.json";
 import IProduct from "../interface/product";
 import { styles } from "../style/styles";
 import { Product } from "../component/Product";
