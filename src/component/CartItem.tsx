@@ -31,34 +31,37 @@ export function CartItem({id, quantity}: CartItemProps) {
           <div>
               <img className="cart-img" src={item.image}/>
           </div>
-            <div>
-              {item.name}{" "}
-            </div>
-            <div> ${item.price} </div>
-            <div className="buttons">
-              <Button
-                size="small"
-                disableElevation
-                variant="contained"
-                onClick={() => decreaseCartQuantity(item.id)}
-              >
-                -
-              </Button>
-            </div>
-            <div>
-              <p>{quantity}</p>
-            </div>
-            <div className="buttons">
-            <Button
-              size="small"
-              disableElevation
-              variant="contained"
-              onClick={() => increaseCartQuantity(item.id)}
-            >
-              +
-            </Button>
-            </div>
-            <div> ${item.price * quantity} </div>
+          <div className="flex-container1">
+              <div>
+                {item.name}{" "}
+              </div>
+              <div> ${item.price} </div>
+              <div className="flex-container">
+                <div className="buttons">
+                  <Button
+                    size="small"
+
+                    onClick={() => decreaseCartQuantity(item.id)}
+                  >
+                    -
+                  </Button>
+                </div>
+                <div>
+                  <p>{quantity}</p>
+                </div>
+                <div className="buttons">
+                <Button
+                  size="small"
+                  onClick={() => increaseCartQuantity(item.id)}
+                >
+                  +
+                </Button>
+                </div>
+              </div>
+         
+              <div>Total price: ${item.price * quantity} </div>
+          </div>
+              
           </div>    
       </Paper>
       </>
