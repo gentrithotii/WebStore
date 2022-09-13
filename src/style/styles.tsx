@@ -81,7 +81,7 @@ export const cartContainer = {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
-    width: "80%"
+    width: "100%"
   }
 }
 

@@ -6,7 +6,7 @@ function Main() {
 
   return (
     <>
-      <h1>Checkout</h1>
+      {/* <h1>Checkout</h1> */}
       <div>
         <TextField
           required
