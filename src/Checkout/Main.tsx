@@ -6,7 +6,6 @@ function Main() {
 
   return (
     <>
-
       <div className="wrapper">
         <br></br>
         <br></br>
