@@ -21,10 +21,7 @@ function Main() {
           <input required name="Phone" type="text" placeholder="Phone" />
 
           <br />
-          <button type="submit" value="Submit">
-            Submit
-          </button>
-
+          <Link to="/Confirmation"><button type="submit" value="Submit">Submit</button></Link>
           <Link to="/Cart"><button type="button" value="Cancel">Cancel</button></Link>
         </form>
         </div>
