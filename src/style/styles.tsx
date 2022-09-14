@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { grid } from "@mui/system";
 import Image from "/images/fruits-mix-background-homepage.jpeg";
 
 export const Wrapper = styled.div`

@@ -60,10 +60,7 @@ export function Product({ id, name, price, origin, image, amount }: ProductProps
   const {
     getItemQuantity,
     increaseCartQuantity,
-    decreaseCartQuantity,
-    removeFromCart,
   } = useShoppingCart()
-  const quantity = getItemQuantity(id)
 
   return (
     <>

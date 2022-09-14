@@ -2,15 +2,7 @@ import Button from "@material-ui/core/Button";
 import { Paper } from "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { getData } from "../Products/main";
-import { styles, cartContainer } from "../style/styles"
-import {
-  Box,
-  Container,
-  IconButton,
-  Menu,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { cartContainer } from "../style/styles"
 
 type CartItemProps = {
     id: number
@@ -20,7 +12,7 @@ type CartItemProps = {
 const data = getData();
 
 export function CartItem({id, quantity}: CartItemProps) {
-    const { removeFromCart, getItemQuantity, increaseCartQuantity, decreaseCartQuantity} = useShoppingCart()
+    const {increaseCartQuantity, decreaseCartQuantity} = useShoppingCart()
     const item = data.find(i => i.id === id)
     if (item == null) return null;
 
@@ -61,7 +53,6 @@ export function CartItem({id, quantity}: CartItemProps) {
          
               <div>Total price: ${item.price * quantity} </div>
           </div>
-              
           </div>    
       </Paper>
       </>
