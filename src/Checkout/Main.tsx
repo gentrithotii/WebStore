@@ -27,26 +27,33 @@ function Main() {
 
   const validateEmail = (e: any) => {
     var email = e.target.value;
-    if (validator.isEmail(email)) {
-      setMessageEmail("");
+
+    console.log("Email is required");
+    if (email === "" && messageEmail === "") {
+      setDisabled(false);
     } else {
-      setMessageEmail("please enter a valid email");
+      if (validator.isEmail(email)) {
+        setMessageEmail("");
+      } else {
+        setMessageEmail("please enter a valid email");
+      }
     }
   };
 
   const validateFName = (e: any) => {
     var name = e.target.value;
-
-    if (validator.isAscii(name)) {
+    console.log("First name is required");
+    if (!validator.isEmpty(name)) {
       setMessageFName("");
     } else {
       setMessageFName("Please, enter valid name!");
     }
   };
+
   const validateLName = (e: any) => {
     var name = e.target.value;
 
-    if (validator.isAscii(name)) {
+    if (!validator.isEmpty(name)) {
       setMessageLName("");
     } else {
       setMessageLName("Please, enter valid name!");
@@ -64,7 +71,7 @@ function Main() {
 
   const validateAddress = (e: any) => {
     var address = e.target.value;
-    if (validator.isAscii(address)) {
+    if (!validator.isEmpty(address)) {
       setMessageAddress("");
     } else {
       setMessageAddress("Please, enter valid Adress!");
@@ -144,7 +151,7 @@ function Main() {
             <br />
             <Link to="/Confirmation">
               <button disabled={!disabled} value="Submit">
-                Submit
+                Order
               </button>
             </Link>
             <Link to="/Cart">
