@@ -4,12 +4,18 @@ import { render } from "react-dom";
 import validator from "validator";
 
 function Main() {
-  const [messageFName, setMessageFName] = useState("");
-  const [messageLName, setMessageLName] = useState("");
-  const [messageEmail, setMessageEmail] = useState("");
-  const [messageAddress, setMessageAddress] = useState("");
-  const [messagePhone, setMessagePhone] = useState("");
-  const [disabled, setDisabled] = useState(false);
+  const [messageFName, setMessageFName] = useState("Please, enter valid name!");
+  const [messageLName, setMessageLName] = useState("Please, enter valid name!");
+  const [messageEmail, setMessageEmail] = useState(
+    "please enter a valid email"
+  );
+  const [messageAddress, setMessageAddress] = useState(
+    "Please, enter valid telephone number"
+  );
+  const [messagePhone, setMessagePhone] = useState(
+    "Please, enter valid Adress"
+  );
+  const [disabled, setDisabled] = useState(true);
 
   const handleDisabled = () => {
     if (
@@ -46,7 +52,7 @@ function Main() {
     if (!validator.isEmpty(name)) {
       setMessageFName("");
     } else {
-      setMessageFName("Please, enter valid name!");
+      setMessageFName("Please, enter valid name");
     }
   };
 
@@ -56,7 +62,7 @@ function Main() {
     if (!validator.isEmpty(name)) {
       setMessageLName("");
     } else {
-      setMessageLName("Please, enter valid name!");
+      setMessageLName("Please, enter valid name");
     }
   };
 
@@ -65,7 +71,7 @@ function Main() {
     if (validator.isMobilePhone(phone)) {
       setMessagePhone("");
     } else {
-      setMessagePhone("Please, enter valid telephone number!");
+      setMessagePhone("Please, enter valid telephone number");
     }
   };
 
@@ -74,7 +80,7 @@ function Main() {
     if (!validator.isEmpty(address)) {
       setMessageAddress("");
     } else {
-      setMessageAddress("Please, enter valid Adress!");
+      setMessageAddress("Please, enter valid Adress");
     }
   };
 
