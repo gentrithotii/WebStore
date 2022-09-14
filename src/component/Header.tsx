@@ -32,8 +32,10 @@ const Header: FC = (): ReactElement => {
         width: "100%",
         height: "auto",
         backgroundColor: "black",
-        position: "fixed", 
-        color: "white"
+        position: "sticky", 
+        color: "white",
+        zIndex: "10",
+        top: "0",
       }}
     >
       <Container maxWidth="xl">
