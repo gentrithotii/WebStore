@@ -4,16 +4,16 @@ import { render } from "react-dom";
 import validator from "validator";
 
 function Main() {
-  const [messageFName, setMessageFName] = useState("Please, enter valid name!");
-  const [messageLName, setMessageLName] = useState("Please, enter valid name!");
+  const [messageFName, setMessageFName] = useState(" ");
+  const [messageLName, setMessageLName] = useState(" ");
   const [messageEmail, setMessageEmail] = useState(
-    "please enter a valid email"
+    " "
   );
   const [messageAddress, setMessageAddress] = useState(
-    "Please, enter valid telephone number"
+    " "
   );
   const [messagePhone, setMessagePhone] = useState(
-    "Please, enter valid Adress"
+    " "
   );
   const [disabled, setDisabled] = useState(true);
 
