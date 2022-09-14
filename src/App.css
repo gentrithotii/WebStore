@@ -12,7 +12,7 @@
 }
 .content {
   background: black;
-  opacity: .7;
+  opacity: 0.7;
   width: 60%;
   height: auto;
   display: flex;
@@ -26,39 +26,39 @@
   color: white;
 }
 
-.link:hover, .link1:hover {
-  color: #D8D1D1;
+.link:hover,
+.link1:hover {
+  color: #d8d1d1;
 }
 
 .link1 {
   color: black;
 }
 
-.footer{
+.footer {
   width: 90%;
   height: auto;
 }
 
 h2 {
   opacity: none;
-  color:white;
+  color: white;
 }
- 
+
 h5 {
   color: white;
   padding: 0.5rem;
 }
 
-.h5-opacity{
+.h5-opacity {
   opacity: 0.8;
   font-size: 1rem;
 }
 
-.rounded-border{
+.rounded-border {
   border: 2px solid black;
   border-radius: 12px;
 }
-
 
 @keyframes logo-spin {
   from {
@@ -87,41 +87,44 @@ h5 {
   background-color: black;
   justify-content: center;
   align-items: center;
-  display: grid!important;
+  display: grid !important;
 }
 
-.flex-container, .flex-container1 {
+.flex-container,
+.flex-container1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
-  justify-content:space-around;
+  justify-content: space-around;
   width: 100%;
-  
 }
 
 @media only screen and (max-width: 800px) {
   .flex-container1 {
-
     flex-direction: column;
-    
   }
 }
 
 @media only screen and (max-width: 800px) {
   .flex-container1 {
-
     flex-direction: column;
-    
+  }
+  .flex-container {
+    width: 90%;
   }
 }
 
-.flex-container, .flex-container1 > div {
+.flex-container,
+.flex-container1 > div {
   background: white;
   margin: 1rem;
-  padding: .1rem;
+  padding: 0.1rem;
   font-size: 1rem;
   width: 100%;
+}
+.flex-container {
+  width: 90%;
 }
 
 .cart-img {
@@ -159,7 +162,8 @@ h5 {
   background-color: black;
 }
 
-input[type=text], select {
+input[type="text"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
