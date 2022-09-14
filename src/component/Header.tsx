@@ -111,7 +111,7 @@ const Header: FC = (): ReactElement => {
           {cartQuantity > 0 && (
           <Link className="link1"  to="/cart">
           <Button
-            style={{ width: "2.5rem", height: "2.5rem", position: "relative", marginRight: "0.5rem" }}
+            style={{ width: "2.5rem", height: "2.5rem", position: "relative", marginRight: "1rem" }}
             variant="outlined"
             className="rounded-circle"
           >
