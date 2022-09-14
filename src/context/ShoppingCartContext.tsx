@@ -1,5 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react"
-import { CartPage } from "../Cart/CartPage"
+import { createContext, ReactNode, useContext} from "react"
 import { useLocalStorage } from "../hooks/useLocalStorage"
 
 type ShoppingCartProviderProps = {

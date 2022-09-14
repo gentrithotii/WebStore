@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { render } from "react-dom";
 import validator from "validator";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 function Main() {
   const [messageFName, setMessageFName] = useState(" ");
@@ -16,6 +16,8 @@ function Main() {
     " "
   );
   const [disabled, setDisabled] = useState(true);
+
+  const { cartItems } = useShoppingCart();
 
   const handleDisabled = () => {
     if (
@@ -156,7 +158,7 @@ function Main() {
 
             <br />
             <Link to="/Confirmation">
-              <button disabled={!disabled} value="Submit">
+              <button onClick={() => cartItems.splice(0, cartItems.length)} disabled={!disabled} value="Submit">
                 Order
               </button>
             </Link>

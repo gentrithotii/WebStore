@@ -16,6 +16,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 const Header: FC = (): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const { cartQuantity } = useShoppingCart()
+  const {cartItems} = useShoppingCart()
 
 
   const handleOpenNavMenu = (event: any) => {
@@ -110,7 +111,7 @@ const Header: FC = (): ReactElement => {
           </Link>
             </Box>
           </Box>
-          {cartQuantity > 0 && (
+          {cartItems.length !== 0 && (
           <Link className="link1"  to="/cart">
           <Button
             style={{ width: "50px", height: "50px", position: "relative" }}
