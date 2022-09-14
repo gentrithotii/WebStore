@@ -6,15 +6,9 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 function Main() {
   const [messageFName, setMessageFName] = useState(" ");
   const [messageLName, setMessageLName] = useState(" ");
-  const [messageEmail, setMessageEmail] = useState(
-    " "
-  );
-  const [messageAddress, setMessageAddress] = useState(
-    " "
-  );
-  const [messagePhone, setMessagePhone] = useState(
-    " "
-  );
+  const [messageEmail, setMessageEmail] = useState(" ");
+  const [messageAddress, setMessageAddress] = useState(" ");
+  const [messagePhone, setMessagePhone] = useState(" ");
   const [disabled, setDisabled] = useState(true);
 
   const { cartItems } = useShoppingCart();
@@ -36,7 +30,6 @@ function Main() {
   const validateEmail = (e: any) => {
     var email = e.target.value;
 
-    console.log("Email is required");
     if (email === "" && messageEmail === "") {
       setDisabled(false);
     } else {
@@ -50,7 +43,6 @@ function Main() {
 
   const validateFName = (e: any) => {
     var name = e.target.value;
-    console.log("First name is required");
     if (!validator.isEmpty(name)) {
       setMessageFName("");
     } else {
@@ -158,7 +150,11 @@ function Main() {
 
             <br />
             <Link to="/Confirmation">
-              <button onClick={() => cartItems.splice(0, cartItems.length)} disabled={!disabled} value="Submit">
+              <button
+                onClick={() => cartItems.splice(0, cartItems.length)}
+                disabled={!disabled}
+                value="Submit"
+              >
                 Order
               </button>
             </Link>
