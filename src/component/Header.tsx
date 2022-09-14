@@ -111,11 +111,11 @@ const Header: FC = (): ReactElement => {
           {cartQuantity > 0 && (
           <Link className="link1"  to="/cart">
           <Button
-            style={{ width: "2.5rem", height: "2.5rem", position: "relative", margin: "0" }}
+            style={{ width: "2.5rem", height: "2.5rem", position: "relative" }}
             variant="outlined"
             className="rounded-circle"
           >
-            <svg
+            <svg style={{ margin:" 0 auto", maxWidth: "100%", width: "auto", height: "auto", display: "block",}}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
               fill="white"
