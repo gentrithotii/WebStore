@@ -13,10 +13,10 @@ const styles = {
     backgroundColor: "white"
 },
   img: {
-    backgroundSize: "cover",
-    width: "90%",
-    heigh: "100%",
+    width: "100%",
+    height: "250px",
     borderRadius: "0 0 20px 20px",
+    
   },
   button: {
     borderRadius: "0 0 20px 20px",
