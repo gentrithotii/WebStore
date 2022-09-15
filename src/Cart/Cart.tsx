@@ -3,7 +3,7 @@ import { Paper, Stack } from "@mui/material";
 import { CartItem } from "../component/CartItem";
 import { getData } from "../Products/main";
 import { Link } from "react-router-dom";
-import { homeContainer } from "../style/styles";
+import { homeContainer, styles } from "../style/styles";
 
 const data = getData();
 
@@ -13,11 +13,12 @@ export function Main() {
   if(cartItems.length !== 0){
     return (
     <>
-      <Stack gap={3}>
+    <Paper style={styles.paperContainer}>
+    <Stack gap={3}>
         {cartItems.map((item) => (
           <CartItem key={item.id} {...item} />
         ))}
-        <div className="ms-auto fw-bold fs-5">
+        <div className="total">
           Total :{" "}$
           {cartItems.reduce((total, cartItem) => {
             const item = data.find((i) => i.id === cartItem.id);
@@ -28,7 +29,9 @@ export function Main() {
           <button type="button">Checkout</button>
         </Link>
       </Stack>
-    </>
+    
+    </Paper>
+    </>  
   )
   } 
   else {

@@ -30,14 +30,13 @@ export const Wrapper = styled.div`
 
 export const styles = {
   
-
     paperContainer: {
       height: '100%',
       width: '100%',
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "white",
+      backgroundColor: "#29251B",
   },
     img: {
       backgroundSize: "cover",
