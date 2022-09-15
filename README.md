@@ -19,6 +19,7 @@
 * React Router
 * React Hooks
 * Netlify
+* Vite
 
 ### Krav för godkänt
 - [x] Git & GitHub har använts
