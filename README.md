@@ -20,14 +20,14 @@
 * React Hooks
 * Netlify
 
-Krav för godkänt
-[x] Git & GitHub har använts
-[X] Projektmappen innehåller en README.md fil - 
-[x] Uppgiften lämnas in i tid!
-[x] React, Typescript & ett komponentbibliotek ska används
-[x] React Router används för navigering
-[x] Formulären vid utcheckningen ska gå att automatiskt fyllas i med hjälp av localStorage.
-[x] Samtliga fält ska ha valideringsregler
-[x] Hemsidan ska vara fullt responsiv (ner till 360px)
-[x] Mockade produkter ska finnas i en egen fil och vara typade med ett TS interface
-[x] Projektet skall läggas upp på Netlify eller liknande tjänst. (https://webstoregrupp5.netlify.app)
+### Krav för godkänt
+- [x] Git & GitHub har använts
+- [X] Projektmappen innehåller en README.md fil - 
+- [x] Uppgiften lämnas in i tid!
+- [x] React, Typescript & ett komponentbibliotek ska används
+- [x] React Router används för navigering
+- [x] Formulären vid utcheckningen ska gå att automatiskt fyllas i med hjälp av localStorage.
+- [x] Samtliga fält ska ha valideringsregler
+- [x] Hemsidan ska vara fullt responsiv (ner till 360px)
+- [x] Mockade produkter ska finnas i en egen fil och vara typade med ett TS interface
+- [x] Projektet skall läggas upp på Netlify eller liknande tjänst. (https://webstoregrupp5.netlify.app)
