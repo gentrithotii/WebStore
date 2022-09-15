@@ -32,7 +32,7 @@ export const styles = {
   
     paperContainer: {
       height: '100%',
-      width: '100%',
+      width: 'auto',
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
@@ -72,17 +72,6 @@ export const styles = {
       fontSize: "2rem",
     }
 }
-
-export const cartContainer = {
-  paperContainer: {
-    height: 'auto',
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
-    width: "100%"
-  }
-}
-
 
 export const homeContainer = {
   paperContainer: {

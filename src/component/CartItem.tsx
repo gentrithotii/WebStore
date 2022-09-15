@@ -2,7 +2,7 @@ import Button from "@material-ui/core/Button";
 import { Paper } from "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { getData } from "../Products/main";
-import { cartContainer } from "../style/styles"
+import { styles } from "../style/styles"
 
 type CartItemProps = {
     id: number
@@ -18,7 +18,7 @@ export function CartItem({id, quantity}: CartItemProps) {
 
     return (
       <>
-         <Paper style={cartContainer.paperContainer}>
+         <Paper className="paperContainer" style={styles.paperContainer}>
         <div className="flex-container">
           <div>
               <img className="cart-img" src={item.image}/>
@@ -28,11 +28,10 @@ export function CartItem({id, quantity}: CartItemProps) {
                 {item.name}{" "}
               </div>
               <div> ${item.price} </div>
-              <div className="flex-container">
+              <div className="flex-container2">
                 <div className="buttons">
                   <Button
                     size="small"
-
                     onClick={() => decreaseCartQuantity(item.id)}
                   >
                     -
@@ -51,7 +50,7 @@ export function CartItem({id, quantity}: CartItemProps) {
                 </div>
               </div>
          
-              <div>Total price: ${item.price * quantity} </div>
+              <div>${item.price * quantity} </div>
           </div>
           </div>    
       </Paper>
