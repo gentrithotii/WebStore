@@ -124,6 +124,7 @@ h5 {
   font-size: 1rem;
   width: 50%;
   background-size: cover;
+  flex: 1;
 }
 .flex-container {
   width: 90%;
@@ -147,6 +148,9 @@ h5 {
   .cart-img {
     max-width: 80%;
    min-height: 150px;
+  }
+  .flex-container {
+    flex-direction: column;
   }
 }
 
