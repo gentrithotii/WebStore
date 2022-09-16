@@ -12,24 +12,23 @@ export function Main() {
 
   if(cartItems.length !== 0){
     return (
-    <>
-    <Stack gap={3}>
-        {cartItems.map((item) => (
-          <CartItem key={item.id} {...item} />
-        ))}
-        <div className="total">
-          Total :{" "}$
-          {cartItems.reduce((total, cartItem) => {
-            const item = data.find((i) => i.id === cartItem.id);
-            return total + (item?.price || 0) * cartItem.quantity;
-          }, 0)}
-        </div>
-        <Link to="/Checkout">
-          <button type="button">Checkout</button>
-        </Link>
-      </Stack>
-    
-    </>  
+      <>
+      <Stack gap={3}>
+          {cartItems.map((item) => (
+            <CartItem key={item.id} {...item} />
+          ))}
+          <div className="total">
+            Total :{" "}$
+            {cartItems.reduce((total, cartItem) => {
+              const item = data.find((i) => i.id === cartItem.id);
+              return total + (item?.price || 0) * cartItem.quantity;
+            }, 0)}
+          </div>
+          <Link to="/Checkout">
+            <button type="button">Checkout</button>
+          </Link>
+        </Stack>
+      </>  
   )
   } 
 }
