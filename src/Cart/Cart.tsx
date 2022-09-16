@@ -13,6 +13,7 @@ export function Main() {
   if(cartItems.length !== 0){
     return (
     <>
+    <Paper style={styles.paperContainer}>
     <Stack gap={3}>
         {cartItems.map((item) => (
           <CartItem key={item.id} {...item} />
@@ -28,6 +29,8 @@ export function Main() {
           <button type="button">Checkout</button>
         </Link>
       </Stack>
+    
+    </Paper>
     </>  
   )
   } 
