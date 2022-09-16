@@ -18,7 +18,7 @@ export function CartItem({id, quantity}: CartItemProps) {
 
     return (
       <>
-         <Paper className="paperContainer" style={styles.paperContainer}>
+         <Paper style={styles.paperContainer}>
         <div className="flex-container">
           <div>
               <img className="cart-img" src={item.image}/>
