@@ -13,7 +13,6 @@ export function Main() {
   if(cartItems.length !== 0){
     return (
     <>
-    <Paper style={styles.paperContainer}>
     <Stack gap={3}>
         {cartItems.map((item) => (
           <CartItem key={item.id} {...item} />
@@ -30,25 +29,8 @@ export function Main() {
         </Link>
       </Stack>
     
-    </Paper>
     </>  
   )
   } 
-  else {
-    return(
-      <>
-       <Paper style={homeContainer.paperContainer}>
-                <div className="content rounded-border">
-                    <h2>The cart Is empty:</h2>
-                    <Link to="/Products">
-          <button><h2>Go back to products </h2></button>
-        </Link>
-
-                </div>
-            </Paper>
-      </>
-    );
-    
-  }
 }
 export default Main;
