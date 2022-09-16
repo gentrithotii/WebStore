@@ -41,7 +41,7 @@ export const styles = {
     img: {
       backgroundSize: "cover",
       width: "100%",
-      height: "250px",
+      height: "200px",
       borderRadius: "0 0 20px 20px",
     },
     button: {

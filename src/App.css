@@ -144,6 +144,10 @@ h5 {
   .flex-container2 {
     width: auto;
   }
+  .cart-img {
+    max-width: 80%;
+   min-height: 150px;
+  }
 }
 
 
