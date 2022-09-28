@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import validator from "validator";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import { NavLink } from "react-router-dom";
 
 function Main() {
   const [messageFName, setMessageFName] = useState(" ");
@@ -147,7 +148,7 @@ function Main() {
             </span>
 
             <br />
-            <Link to="/Confirmation">
+            <NavLink to="/Confirmation">
               <button
                 onClick={() => cartItems.splice(0, cartItems.length)}
                 disabled={!disabled}
@@ -155,12 +156,12 @@ function Main() {
               >
                 Order
               </button>
-            </Link>
-            <Link to="/Cart">
+            </NavLink>
+            <NavLink to="/Cart">
               <button type="button" value="Cancel">
                 Cancel
               </button>
-            </Link>
+            </NavLink>
           </form>
         </div>
       </div>

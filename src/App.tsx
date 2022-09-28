@@ -7,6 +7,7 @@ import Confirmation from "./confirmationPage/confirmation";
 
 import Checkout from "./Checkout/Checkout";
 import { CartPage } from "./Cart/CartPage";
+import { DetailsPage } from "./Details/Details";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/details/:id" element={<DetailsPage />} />
       </Routes>
       
     </ShoppingCartProvider>
