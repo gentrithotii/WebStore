@@ -3,6 +3,12 @@ import { useState, useEffect } from "react";
 import validator from "validator";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { NavLink } from "react-router-dom";
+import * as React from "react";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
 function Main() {
   const [messageFName, setMessageFName] = useState(" ");
@@ -43,7 +49,7 @@ function Main() {
 
   const validateFName = (e: any) => {
     var name = e.target.value;
-    if (RegExp("[a-zA-Z-]").test(name)) {
+    if (validator.isAlpha(name)) {
       setMessageFName("");
     } else {
       setMessageFName("Please, enter valid name");
@@ -52,7 +58,7 @@ function Main() {
   const validateLName = (e: any) => {
     var name = e.target.value;
 
-    if (RegExp("[a-zA-Z]").test(name)) {
+    if (validator.isAlpha(name)) {
       setMessageLName("");
     } else {
       setMessageLName("Please, enter valid name");
@@ -61,7 +67,7 @@ function Main() {
 
   const validatePhone = (e: any) => {
     var phone = e.target.value;
-    if (RegExp("").test(phone)) {
+    if (validator.isMobilePhone(phone)) {
       setMessagePhone("");
     } else {
       setMessagePhone("Please, enter valid telephone number");
@@ -70,7 +76,7 @@ function Main() {
 
   const validateAddress = (e: any) => {
     var address = e.target.value;
-    if (RegExp("[a-zA-Z]").test(address)) {
+    if (validator.isAscii(address)) {
       setMessageAddress("");
     } else {
       setMessageAddress("Please, enter valid Adress");
@@ -81,23 +87,20 @@ function Main() {
     handleDisabled();
   });
 
-  return (
+  /* return (
     <>
       <div className="checkout-container">
         <div className="div-container">
           <form className="form">
             <label>First Name</label>
             <input
-              onChange={(e) => validateFName(e)}
+              
               required
               name="FirstName"
               type="text"
               placeholder="First Name"
             />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageFName}{" "}
-            </span>
+          
             <label>Last Name</label>
             <input
               onChange={(e) => validateLName(e)}
@@ -166,6 +169,109 @@ function Main() {
         </div>
       </div>
     </>
+  ); */
+  return (
+    <React.Fragment>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            onChange={(e) => validateFName(e)}
+            required
+            id="firstName"
+            name="firstName"
+            label="First name"
+            fullWidth
+            autoComplete="given-name"
+            variant="standard"
+          />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageFName}{" "}
+          </span>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <TextField
+            onChange={(e) => validateLName(e)}
+            required
+            id="lastName"
+            name="lastName"
+            label="Last name"
+            fullWidth
+            autoComplete="family-name"
+            variant="standard"
+          />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageLName}{" "}
+          </span>
+        </Grid>
+
+        <Grid item xs={12}>
+          <TextField
+            onChange={(e) => validateAddress(e)}
+            required
+            id="address"
+            name="address"
+            label="Address line"
+            fullWidth
+            autoComplete="address"
+            variant="standard"
+          />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageAddress}{" "}
+          </span>
+        </Grid>
+
+        <Grid item xs={12}>
+          <TextField
+            onChange={(e) => validateEmail(e)}
+            id="email"
+            name="email"
+            label="Email"
+            fullWidth
+            autoComplete="email"
+            variant="standard"
+          />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageEmail}{" "}
+          </span>
+        </Grid>
+
+        <Grid item xs={12} sm={6}>
+          <TextField
+            onChange={(e) => validatePhone(e)}
+            required
+            id="phone"
+            name="phone"
+            label="phone"
+            fullWidth
+            autoComplete="phone"
+            variant="standard"
+          />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messagePhone}{" "}
+          </span>
+        </Grid>
+      </Grid>
+      <NavLink to="/Confirmation">
+        <button
+          onClick={() => cartItems.splice(0, cartItems.length)}
+          disabled={!disabled}
+          value="Submit"
+        >
+          Order
+        </button>
+      </NavLink>
+      <NavLink to="/Cart">
+        <button type="button" value="Cancel">
+          Cancel
+        </button>
+      </NavLink>
+    </React.Fragment>
   );
 }
 
