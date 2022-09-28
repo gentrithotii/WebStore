@@ -13,12 +13,9 @@ const data = products as IProduct[];
 
 export function Main() {
 
-    const {productId} = useParams()
-    const thisProduct = data.find(product => product.id === Number(productId))
+  let {id} = useParams()
+    const thisProduct = data.find(product => product.id === Number(id))
 
-    console.log(productId);
-
-    
     return (
       <Paper>
       <div style={styles.imageContainer}>
