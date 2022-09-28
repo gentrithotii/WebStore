@@ -1,5 +1,4 @@
-import Button from "@material-ui/core/Button";
-import { Paper } from "@mui/material";
+import {Button, Paper} from  "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { getData } from "../Products/main";
 import { styles } from "../style/styles"
