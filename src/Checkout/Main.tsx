@@ -32,14 +32,10 @@ function Main() {
     if (email === "" && messageEmail === "") {
       setDisabled(false);
     } else {
-
-      
-      if (RegExp("^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").test(email)) {
-        console.log("valid email");
+      if (validator.isEmail(email)) {
         setMessageEmail("");
       } else {
         setMessageEmail("please enter a valid email");
-        console.log("invalid email");
       }
     }
   };
