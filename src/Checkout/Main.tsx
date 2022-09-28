@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import validator from "validator";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { NavLink } from "react-router-dom";
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import * as React from "react";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 
 function Main() {
   const [messageFName, setMessageFName] = useState(" ");
@@ -49,7 +49,7 @@ function Main() {
 
   const validateFName = (e: any) => {
     var name = e.target.value;
-    if (RegExp("[a-zA-Z-]").test(name)) {
+    if (validator.isAlpha(name)) {
       setMessageFName("");
     } else {
       setMessageFName("Please, enter valid name");
@@ -58,7 +58,7 @@ function Main() {
   const validateLName = (e: any) => {
     var name = e.target.value;
 
-    if (RegExp("[a-zA-Z]").test(name)) {
+    if (validator.isAlpha(name)) {
       setMessageLName("");
     } else {
       setMessageLName("Please, enter valid name");
@@ -67,7 +67,7 @@ function Main() {
 
   const validatePhone = (e: any) => {
     var phone = e.target.value;
-    if (RegExp("").test(phone)) {
+    if (validator.isMobilePhone(phone)) {
       setMessagePhone("");
     } else {
       setMessagePhone("Please, enter valid telephone number");
@@ -76,7 +76,7 @@ function Main() {
 
   const validateAddress = (e: any) => {
     var address = e.target.value;
-    if (RegExp("[a-zA-Z]").test(address)) {
+    if (validator.isAscii(address)) {
       setMessageAddress("");
     } else {
       setMessageAddress("Please, enter valid Adress");
@@ -87,7 +87,7 @@ function Main() {
     handleDisabled();
   });
 
-  return (
+  /* return (
     <>
       <div className="checkout-container">
         <div className="div-container">
@@ -169,18 +169,9 @@ function Main() {
         </div>
       </div>
     </>
-  );
-}
-
-export default Main;
-
-
-export default function AddressForm() {
+  ); */
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
-        Shipping address
-      </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -193,13 +184,15 @@ export default function AddressForm() {
             autoComplete="given-name"
             variant="standard"
           />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageFName}{" "}
-            </span>
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageFName}{" "}
+          </span>
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <TextField
+            onChange={(e) => validateLName(e)}
             required
             id="lastName"
             name="lastName"
@@ -208,92 +201,78 @@ export default function AddressForm() {
             autoComplete="family-name"
             variant="standard"
           />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageLName}{" "}
+          </span>
         </Grid>
+
         <Grid item xs={12}>
           <TextField
+            onChange={(e) => validateAddress(e)}
             required
-            id="address1"
-            name="address1"
-            label="Address line 1"
+            id="address"
+            name="address"
+            label="Address line"
             fullWidth
-            autoComplete="shipping address-line1"
+            autoComplete="address"
             variant="standard"
           />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageAddress}{" "}
+          </span>
         </Grid>
+
         <Grid item xs={12}>
           <TextField
-            id="address2"
-            name="address2"
-            label="Address line 2"
+            onChange={(e) => validateEmail(e)}
+            id="email"
+            name="email"
+            label="Email"
             fullWidth
-            autoComplete="shipping address-line2"
+            autoComplete="email"
             variant="standard"
           />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messageEmail}{" "}
+          </span>
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <TextField
+            onChange={(e) => validatePhone(e)}
             required
-            id="city"
-            name="city"
-            label="City"
+            id="phone"
+            name="phone"
+            label="phone"
             fullWidth
-            autoComplete="shipping address-level2"
+            autoComplete="phone"
             variant="standard"
           />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            id="state"
-            name="state"
-            label="State/Province/Region"
-            fullWidth
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
-            fullWidth
-            autoComplete="shipping postal-code"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Country"
-            fullWidth
-            autoComplete="shipping country"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <FormControlLabel
-            control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
-            label="Use this address for payment details"
-          />
+          <span style={{ fontWeight: "bold", color: "red" }}>
+            {" "}
+            {messagePhone}{" "}
+          </span>
         </Grid>
       </Grid>
+      <NavLink to="/Confirmation">
+        <button
+          onClick={() => cartItems.splice(0, cartItems.length)}
+          disabled={!disabled}
+          value="Submit"
+        >
+          Order
+        </button>
+      </NavLink>
+      <NavLink to="/Cart">
+        <button type="button" value="Cancel">
+          Cancel
+        </button>
+      </NavLink>
     </React.Fragment>
   );
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-material-ui/AddressForm.tsx at v5.10.7 · mui/material-ui
+
+export default Main;
