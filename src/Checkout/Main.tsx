@@ -29,13 +29,12 @@ function Main() {
 
   const validateEmail = (e: any) => {
     var email = e.target.value;
-    console.log(email);
     if (email === "" && messageEmail === "") {
       setDisabled(false);
     } else {
 
       
-      if (RegExp("^(([+]46)\s*(7)|07)[02369]\s*(\d{4})\s*(\d{3})$").test(email)) {
+      if (RegExp("^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$").test(email)) {
         console.log("valid email");
         setMessageEmail("");
       } else {
