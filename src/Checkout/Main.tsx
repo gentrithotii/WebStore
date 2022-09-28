@@ -29,31 +29,34 @@ function Main() {
 
   const validateEmail = (e: any) => {
     var email = e.target.value;
-
+    console.log(email);
     if (email === "" && messageEmail === "") {
       setDisabled(false);
     } else {
-      if (validator.isEmail(email)) {
+
+      
+      if (RegExp("^(([+]46)\s*(7)|07)[02369]\s*(\d{4})\s*(\d{3})$").test(email)) {
+        console.log("valid email");
         setMessageEmail("");
       } else {
         setMessageEmail("please enter a valid email");
+        console.log("invalid email");
       }
     }
   };
 
   const validateFName = (e: any) => {
     var name = e.target.value;
-    if (!validator.isEmpty(name)) {
+    if (RegExp("[a-zA-Z-]").test(name)) {
       setMessageFName("");
     } else {
       setMessageFName("Please, enter valid name");
     }
   };
-
   const validateLName = (e: any) => {
     var name = e.target.value;
 
-    if (!validator.isEmpty(name)) {
+    if (RegExp("[a-zA-Z]").test(name)) {
       setMessageLName("");
     } else {
       setMessageLName("Please, enter valid name");
@@ -62,7 +65,7 @@ function Main() {
 
   const validatePhone = (e: any) => {
     var phone = e.target.value;
-    if (validator.isMobilePhone(phone)) {
+    if (RegExp("").test(phone)) {
       setMessagePhone("");
     } else {
       setMessagePhone("Please, enter valid telephone number");
@@ -71,7 +74,7 @@ function Main() {
 
   const validateAddress = (e: any) => {
     var address = e.target.value;
-    if (!validator.isEmpty(address)) {
+    if (RegExp("[a-zA-Z]").test(address)) {
       setMessageAddress("");
     } else {
       setMessageAddress("Please, enter valid Adress");
