@@ -1,5 +1,7 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Paper, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
 
 const styles = {
   
@@ -57,13 +59,14 @@ type ProductProps = {
 
 export function Product({ id, name, price, origin, image, amount }: ProductProps) {
   const {
-    getItemQuantity,
     increaseCartQuantity,
   } = useShoppingCart()
 
   return (
     <>
+
     <Paper>
+    <Link to={`/details/${id}`}>
       <div style={styles.imageContainer}>
           <img src={image} style={styles.img} />
         </div>
@@ -77,6 +80,7 @@ export function Product({ id, name, price, origin, image, amount }: ProductProps
         >
           Add to Cart{" "}
         </Button>
+        </Link>
     </Paper>
       
     </>

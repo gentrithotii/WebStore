@@ -2,8 +2,8 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { Paper, Stack } from "@mui/material";
 import { CartItem } from "../component/CartItem";
 import { getData } from "../Products/main";
-import { Link } from "react-router-dom";
 import { homeContainer, styles } from "../style/styles";
+import { NavLink } from "react-router-dom";
 
 const data = getData();
 
@@ -25,9 +25,9 @@ export function Main() {
             return total + (item?.price || 0) * cartItem.quantity;
           }, 0)}
         </div>
-        <Link to="/Checkout">
+        <NavLink to="/Checkout">
           <button type="button">Checkout</button>
-        </Link>
+        </NavLink>
       </Stack>
     
     </Paper>
@@ -40,9 +40,9 @@ export function Main() {
        <Paper style={homeContainer.paperContainer}>
                 <div className="content rounded-border">
                     <h2>The cart Is empty:</h2>
-                    <Link to="/Products">
+                    <NavLink to="/Products">
           <button><h2>Go back to products </h2></button>
-        </Link>
+        </NavLink>
 
                 </div>
             </Paper>
