@@ -1,6 +1,5 @@
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import Button from "@material-ui/core/Button";
-import { Paper } from "@mui/material";
+import { Paper, Button } from "@mui/material";
 
 const styles = {
   
