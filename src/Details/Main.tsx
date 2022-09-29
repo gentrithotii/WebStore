@@ -1,11 +1,11 @@
-import { Paper, Stack, Button, Box } from "@mui/material";
+import {Button, Box } from "@mui/material";
 import {styles } from "../style/styles";
 import {useParams} from "react-router-dom";
 import products from "../Json/products.json";
 import IProduct from "../interface/product";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
-//const data = getData();
+
 const data = products as IProduct[];
 
 
@@ -21,6 +21,9 @@ export function Main() {
             <img src={thisProduct?.image} style={styles.img} />
             <h3>{thisProduct?.name}</h3>
             <h3>${thisProduct?.price}</h3>
+            <h3>Description.</h3>
+            <p className="description">{thisProduct?.description}</p>
+            
             <Button onClick={() => increaseCartQuantity(Number(id))} style={styles.button}>
               Add to Cart{" "}
             </Button>
@@ -31,3 +34,4 @@ export function Main() {
 }
 
 export default Main;
+
