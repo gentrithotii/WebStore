@@ -3,8 +3,6 @@ import products from "../Json/products.json";
 import IProduct from "../interface/product";
 import { styles } from "../style/styles";
 import { Product } from "../component/Product";
-import { Link } from "react-router-dom";
-
 const data = products as IProduct[];
 
 export function getData() {

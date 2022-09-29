@@ -1,7 +1,8 @@
 import {Button, Paper} from  "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { getData } from "../Products/main";
-import { styles } from "../style/styles"
+import { styles } from "../style/styles";
+import { Link } from "react-router-dom";
 
 type CartItemProps = {
     id: number
@@ -19,9 +20,13 @@ export function CartItem({id, quantity}: CartItemProps) {
       <>
          <Paper style={styles.paperContainer}>
         <div className="flex-container">
-          <div>
+        <Link to={`/details/${id}`}>
+          <div >
+          
               <img className="cart-img" src={item.image}/>
+         
           </div>
+          </Link>
           <div className="flex-container1">
               <div>
                 {item.name}{" "}
