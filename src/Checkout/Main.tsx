@@ -1,14 +1,11 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import validator from "validator";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { NavLink } from "react-router-dom";
 import * as React from "react";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+import { Box } from "@mui/material";
 
 function Main() {
   const [messageFName, setMessageFName] = useState(" ");
@@ -87,91 +84,9 @@ function Main() {
     handleDisabled();
   });
 
-  /* return (
-    <>
-      <div className="checkout-container">
-        <div className="div-container">
-          <form className="form">
-            <label>First Name</label>
-            <input
-              
-              required
-              name="FirstName"
-              type="text"
-              placeholder="First Name"
-            />
-          
-            <label>Last Name</label>
-            <input
-              onChange={(e) => validateLName(e)}
-              required
-              name="LastName"
-              type="text"
-              placeholder="Last Name"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageLName}{" "}
-            </span>
-            <label>Email</label>
-            <input
-              onChange={(e) => validateEmail(e)}
-              required
-              name="Email"
-              type="text"
-              placeholder="Email"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageEmail}{" "}
-            </span>
-            <label>Address</label>
-            <input
-              onChange={(e) => validateAddress(e)}
-              required
-              name="Address"
-              type="text"
-              placeholder="Address"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageAddress}{" "}
-            </span>
-            <label>Phone</label>
-            <input
-              onChange={(e) => validatePhone(e)}
-              required
-              name="Phone"
-              type="text"
-              placeholder="Phone"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messagePhone}{" "}
-            </span>
-
-            <br />
-            <NavLink to="/Confirmation">
-              <button
-                onClick={() => cartItems.splice(0, cartItems.length)}
-                disabled={!disabled}
-                value="Submit"
-              >
-                Order
-              </button>
-            </NavLink>
-            <NavLink to="/Cart">
-              <button type="button" value="Cancel">
-                Cancel
-              </button>
-            </NavLink>
-          </form>
-        </div>
-      </div>
-    </>
-  ); */
   return (
     <React.Fragment>
+      <Box sx={{alignItems: 'center', height: '100vh',background: 'white', display: {xs: 'block', md: 'block'}}}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -183,11 +98,10 @@ function Main() {
             fullWidth
             autoComplete="given-name"
             variant="standard"
+            helperText={messageFName}
+            error={Boolean(messageFName)}
           />
-          <span style={{ fontWeight: "bold", color: "red" }}>
-            {" "}
-            {messageFName}{" "}
-          </span>
+         
         </Grid>
 
         <Grid item xs={12} sm={6}>
@@ -271,6 +185,7 @@ function Main() {
           Cancel
         </button>
       </NavLink>
+      </Box>
     </React.Fragment>
   );
 }
