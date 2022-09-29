@@ -4,5 +4,6 @@ export default interface IProduct {
     price: number;
     origin: string;
     image: string;
-    amount: number
+    amount: number;
+    description: string;
 }

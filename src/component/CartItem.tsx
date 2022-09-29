@@ -1,4 +1,4 @@
-import {Button, Paper} from  "@mui/material";
+import {Button, Paper, Box} from  "@mui/material";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { getData } from "../Products/main";
 import { styles } from "../style/styles";
@@ -18,14 +18,12 @@ export function CartItem({id, quantity}: CartItemProps) {
 
     return (
       <>
-         <Paper style={styles.paperContainer}>
+      <Paper style={styles.paperContainer}>
         <div className="flex-container">
-        <Link to={`/details/${id}`}>
-          <div >
-          
+        <Link className="custom-link"  to={`/details/${id}`}>
+          <Box>
               <img className="cart-img" src={item.image}/>
-         
-          </div>
+          </Box>
           </Link>
           <div className="flex-container1">
               <div>
