@@ -1,225 +1,160 @@
-import { useState, useEffect } from "react";
-import validator from "validator";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { NavLink } from "react-router-dom";
-import * as React from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import { Box } from "@mui/material";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import { height } from "@mui/system";
-import { Formik, Form, Field } from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
+import React from "react";
 
 function Main() {
-  const [messageFName, setMessageFName] = useState(" ");
-  const [messageLName, setMessageLName] = useState(" ");
-  const [messageEmail, setMessageEmail] = useState(" ");
-  const [messageAddress, setMessageAddress] = useState(" ");
-  const [messagePhone, setMessagePhone] = useState(" ");
-  const [disabled, setDisabled] = useState(true);
-
   const { cartItems } = useShoppingCart();
-
-  const handleDisabled = () => {
-    if (
-      messageFName === "" &&
-      messageLName === "" &&
-      messageEmail === "" &&
-      messageAddress === "" &&
-      messagePhone === ""
-    ) {
-      setDisabled(true);
-    } else {
-      setDisabled(false);
-    }
-  };
-
-  const validateEmail = (e: any) => {
-    var email = e.target.value;
-    if (email === "" && messageEmail === "") {
-      setDisabled(false);
-    } else {
-      if (validator.isEmail(email)) {
-        setMessageEmail("");
-      } else {
-        setMessageEmail("please enter a valid email");
-      }
-    }
-  };
-
-  const validateFName = (e: any) => {
-    var name = e.target.value;
-    if (validator.isAlpha(name)) {
-      setMessageFName("");
-    } else {
-      setMessageFName("Please, enter valid name");
-    }
-  };
-  const validateLName = (e: any) => {
-    var name = e.target.value;
-
-    if (validator.isAlpha(name)) {
-      setMessageLName("");
-    } else {
-      setMessageLName("Please, enter valid name");
-    }
-  };
-
-  const validatePhone = (e: any) => {
-    var phone = e.target.value;
-    if (validator.isMobilePhone(phone)) {
-      setMessagePhone("");
-    } else {
-      setMessagePhone("Please, enter valid telephone number");
-    }
-  };
-
-  const validateAddress = (e: any) => {
-    var address = e.target.value;
-    if (validator.isAscii(address)) {
-      setMessageAddress("");
-    } else {
-      setMessageAddress("Please, enter valid Adress");
-    }
-  };
-
-  useEffect(() => {
-    handleDisabled();
-  });
+  const navigate = useNavigate();
+  const phoneRegExp =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
   const validationSchema = Yup.object({
     firstName: Yup.string()
-      .min(1, "Cannot be empty")
+      .min(2)
+      .max(30)
       .label("First Name")
       .required("Required"),
     lastName: Yup.string()
-      .min(1, "Cannot be empty")
+      .min(2)
+      .max(30)
       .label("Last Name")
       .required("Required"),
     email: Yup.string()
       .email("Invalid email address")
       .label("Email")
       .required("Required"),
-    address: Yup.string()
-      .min(1, "Cannot be empty")
-      .label("Address")
-      .required("Required"),
+    address: Yup.string().min(2).max(30).label("Address").required("Required"),
     phone: Yup.string()
-      .min(1, "Cannot be empty")
+      .matches(phoneRegExp, "Phone number is not valid")
       .label("Phone")
       .required("Required"),
   });
 
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      phone: "",
+    },
+    validationSchema: validationSchema,
+    onSubmit: (values) => {
+      console.log(values);
+      () => cartItems.splice(0, cartItems.length);
+      navigate("/confirmation");
+    },
+  });
   return (
     <React.Fragment>
-      <Box
-        sx={{
-          alignItems: "center",
-          height: "100vh",
-          background: "white",
-          display: { xs: "block", md: "block" },
-        }}
-      >
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              onChange={(e) => validateFName(e)}
-              required
-              id="firstName"
-              name="firstName"
-              label="First name"
-              fullWidth
-              autoComplete="given-name"
-              variant="standard"
-              helperText={messageFName}
-              error={Boolean(messageFName)}
-            />
-          </Grid>
+      <form onSubmit={formik.handleSubmit}>
+        <Box
+          sx={{
+            alignItems: "center",
+            height: "77vh",
+            background: "white",
+            display: { xs: "block", md: "block" },
+            padding: "20px",
+          }}
+        >
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="firstName"
+                name="firstName"
+                label="First name"
+                fullWidth
+                autoComplete="given-name"
+                variant="standard"
+                value={formik.values.firstName}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.firstName && Boolean(formik.errors.firstName)
+                }
+                helperText={formik.touched.firstName && formik.errors.firstName}
+                sx={{ color: "white", backgroundColor: "" }}
+              />
+            </Grid>
 
-          <Grid item xs={12} sm={6}>
-            <TextField
-              onChange={(e) => validateLName(e)}
-              required
-              id="lastName"
-              name="lastName"
-              label="Last name"
-              fullWidth
-              autoComplete="family-name"
-              variant="standard"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageLName}{" "}
-            </span>
-          </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="lastName"
+                name="lastName"
+                label="Last name"
+                fullWidth
+                autoComplete="family-name"
+                variant="standard"
+                value={formik.values.lastName}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.lastName && Boolean(formik.errors.lastName)
+                }
+                helperText={formik.touched.lastName && formik.errors.lastName}
+              />
+            </Grid>
 
-          <Grid item xs={12}>
-            <TextField
-              onChange={(e) => validateAddress(e)}
-              required
-              id="address"
-              name="address"
-              label="Address line"
-              fullWidth
-              autoComplete="address"
-              variant="standard"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageAddress}{" "}
-            </span>
-          </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                id="address"
+                name="address"
+                label="Address line"
+                fullWidth
+                autoComplete="address"
+                variant="standard"
+                value={formik.values.address}
+                onChange={formik.handleChange}
+                error={formik.touched.address && Boolean(formik.errors.address)}
+                helperText={formik.touched.address && formik.errors.address}
+              />
+            </Grid>
 
-          <Grid item xs={12}>
-            <TextField
-              onChange={(e) => validateEmail(e)}
-              id="email"
-              name="email"
-              label="Email"
-              fullWidth
-              autoComplete="email"
-              variant="standard"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messageEmail}{" "}
-            </span>
-          </Grid>
+            <Grid item xs={12}>
+              <TextField
+                id="email"
+                name="email"
+                label="Email"
+                fullWidth
+                autoComplete="email"
+                variant="standard"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                error={formik.touched.email && Boolean(formik.errors.email)}
+                helperText={formik.touched.email && formik.errors.email}
+              />
+            </Grid>
 
-          <Grid item xs={12} sm={6}>
-            <TextField
-              onChange={(e) => validatePhone(e)}
-              required
-              id="phone"
-              name="phone"
-              label="phone"
-              fullWidth
-              autoComplete="phone"
-              variant="standard"
-            />
-            <span style={{ fontWeight: "bold", color: "red" }}>
-              {" "}
-              {messagePhone}{" "}
-            </span>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="phone"
+                name="phone"
+                label="Phone"
+                fullWidth
+                autoComplete="phone"
+                variant="standard"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                error={formik.touched.phone && Boolean(formik.errors.phone)}
+                helperText={formik.touched.phone && formik.errors.phone}
+              />
+            </Grid>
           </Grid>
-        </Grid>
-        <NavLink to="/Confirmation">
-          <button
-            onClick={() => cartItems.splice(0, cartItems.length)}
-            disabled={!disabled}
-            value="Submit"
-          >
+          <button type="submit" value="Submit">
             Order
           </button>
-        </NavLink>
-        <NavLink to="/Cart">
-          <button type="button" value="Cancel">
-            Cancel
-          </button>
-        </NavLink>
-      </Box>
+          <NavLink to="/Cart">
+            <button value="Cancel">Cancel</button>
+          </NavLink>
+        </Box>
+      </form>
     </React.Fragment>
   );
 }
