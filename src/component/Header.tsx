@@ -7,7 +7,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-//import MenuIcon from "@mui/icons-material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -59,7 +59,7 @@ const Header: FC = (): ReactElement => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              {/* <MenuIcon /> */}
+            <MenuIcon /> 
             </IconButton>
             <Menu
               id="menu-appbar"
