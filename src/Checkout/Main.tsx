@@ -45,8 +45,7 @@ function Main() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(values);
-      () => cartItems.splice(0, cartItems.length);
+      cartItems.splice(0, cartItems.length);
       navigate("/confirmation");
     },
   });
